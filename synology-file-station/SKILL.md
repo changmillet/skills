@@ -44,6 +44,8 @@ Optional env:
 - `SYNOLOGY_VERIFY_SSL`
 - `SYNOLOGY_TIMEOUT`
 - `SYNOLOGY_SESSION`
+- `SYNOLOGY_READONLY` (default `true`, blocks all mutation commands)
+- `SYNOLOGY_MUTATION_ALLOW_PATHS` (required for mutation when readonly=false)
 
 ## Output Contract
 - Success: JSON object with `type=status` and operation-specific fields.

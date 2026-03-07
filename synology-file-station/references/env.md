@@ -9,6 +9,12 @@
 - `SYNOLOGY_VERIFY_SSL`: `true`/`false`, default `true`.
 - `SYNOLOGY_TIMEOUT`: HTTP timeout in seconds, default `30`.
 - `SYNOLOGY_SESSION`: login session name, default `FileStation`.
+- `SYNOLOGY_READONLY`: `true`/`false`, default `true`.
+  - `true`: block all mutation commands (safe read-only mode).
+  - `false`: allow mutation commands, but still require allowlist below.
+- `SYNOLOGY_MUTATION_ALLOW_PATHS`: comma-separated mutable root paths, e.g. `/home/ai-work,/data/projects`.
+  - Required when `SYNOLOGY_READONLY=false` for any mutation command.
+  - Any write target outside these roots is rejected.
 - Compatibility aliases:
   - `SYNOLOGY_URL` (same as `SYNOLOGY_BASE_URL`)
   - `SYNOLOGY_USER` (same as `SYNOLOGY_USERNAME`)
