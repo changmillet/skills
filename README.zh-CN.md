@@ -13,21 +13,21 @@ checkPaths:
   - README.md
   - .claude-plugin/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-12
-lastReviewedCommit: c5f8fe3ff43313f69b8deb4d970261c4013c5310
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
 ---
 
 # 天工 AI Skills
 
-仓库地址: https://github.com/tiangong-ai/skills
+仓库地址: https://github.com/tiangong-ai/agent-skills
 
 请使用 https://github.com/vercel-labs/skills 提供的 `skills` CLI 来安装、更新和管理这些 skills。
 
 ## 反馈问题或建议能力
 
-使用[反馈表单](https://github.com/tiangong-ai/skills/issues/new/choose)和
+使用[反馈表单](https://github.com/tiangong-ai/agent-skills/issues/new/choose)和
 [提交指南](CONTRIBUTING.md)，支持中文和英文。CLI 运行时问题或归属不确定时，
-使用 [CLI 表单](https://github.com/tiangong-ai/cli/issues/new/choose)。也可以让
+使用 [CLI 表单](https://github.com/tiangong-ai/cli-toolkit/issues/new/choose)。也可以让
 已安装的 Auto Research 按随包提供的反馈规范生成统一格式的 Issue 草稿。
 
 ## 原子数据 Skills
@@ -77,38 +77,38 @@ npm i skills -g
 
 - 仅列出可用技能（不安装）:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --list
+  npx skills add https://github.com/tiangong-ai/agent-skills --list
   ```
 - 安装全部技能（默认项目级）:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills
+  npx skills add https://github.com/tiangong-ai/agent-skills
   ```
 - 安装指定技能:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-auto-research --skill tiangong-kb-sci-search
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-auto-research --skill tiangong-kb-sci-search
   ```
 - 安装清华研究生学位论文 LaTeX 工作流:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tsinghua-graduate-thesis
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tsinghua-graduate-thesis
   ```
 - 安装天工 KB 导入工作流:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-kb-ingest
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-kb-ingest
   ```
 - WorkBuddy/CodeBuddy 作为 producer 时，在 canonical orchestrator 旁安装薄适配 Skill:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-auto-research --skill tiangong-auto-research-workbuddy
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-auto-research --skill tiangong-auto-research-workbuddy
   ```
 
 ## 目标 agent 与作用域
 
 - 指定 agent:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills -a codex -a claude-code
+  npx skills add https://github.com/tiangong-ai/agent-skills -a codex -a claude-code
   ```
 - 全局安装（用户级）:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills -g
+  npx skills add https://github.com/tiangong-ai/agent-skills -g
   ```
 - 作用域说明:
   - Codex 是 universal agent：项目级使用 `./.agents/skills`，全局使用

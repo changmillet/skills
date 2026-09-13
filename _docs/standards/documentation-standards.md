@@ -13,8 +13,8 @@ checkPaths:
   - .github/workflows/docpact.yml
   - _docs/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-12
-lastReviewedCommit: c5f8fe3ff43313f69b8deb4d970261c4013c5310
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
 ---
 
 # Skills Documentation Standards

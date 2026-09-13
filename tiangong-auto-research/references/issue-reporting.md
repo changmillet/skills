@@ -4,7 +4,7 @@ Use this reference when the user asks to report a bug, provide feedback, or
 prepare an issue about Auto Research. This is reporting, not a new research
 request: it does not require setup, a rewritten scientific question, provider
 checks, or a working research workspace. It implements
-[reporting contract v1](https://github.com/tiangong-ai/workspace/blob/main/_docs/contracts/issue-reporting-policy.md).
+[reporting contract v1](https://github.com/tiangong-ai/workspace-suite/blob/main/_docs/contracts/issue-reporting-policy.md).
 The templates below are complete and usable offline after installing this Skill.
 
 ## Prepare The Report
@@ -12,9 +12,9 @@ The templates below are complete and usable offline after installing this Skill.
 1. Identify whether this is a bug or a requested capability. Search for an
    existing issue if GitHub access is available; if unavailable, state that the
    duplicate search was not performed and continue preparing a local draft.
-2. Choose [Skills](https://github.com/tiangong-ai/skills/issues/new/choose) for
+2. Choose [Skills](https://github.com/tiangong-ai/agent-skills/issues/new/choose) for
    instructions, orchestration, references, or agent routing. Choose
-   [CLI](https://github.com/tiangong-ai/cli/issues/new/choose) for commands,
+   [CLI](https://github.com/tiangong-ai/cli-toolkit/issues/new/choose) for commands,
    setup/install, runtime errors, schemas, locks, or packages. Uncertain and
    cross-component reports enter CLI; `Unsure / 不确定` is a valid component.
    Maintain one report and let maintainers transfer it or link implementation tasks.

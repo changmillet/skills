@@ -13,22 +13,22 @@ checkPaths:
   - README.zh-CN.md
   - .claude-plugin/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-12
-lastReviewedCommit: c5f8fe3ff43313f69b8deb4d970261c4013c5310
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
 ---
 
 # Tiangong AI Skills
 
-Repository: https://github.com/tiangong-ai/skills
+Repository: https://github.com/tiangong-ai/agent-skills
 
 Use the `skills` CLI from https://github.com/vercel-labs/skills to install, update, and manage these skills.
 
 ## Report a problem or suggest a capability
 
-Use the [feedback forms](https://github.com/tiangong-ai/skills/issues/new/choose)
+Use the [feedback forms](https://github.com/tiangong-ai/agent-skills/issues/new/choose)
 and [contribution guide](CONTRIBUTING.md). Chinese and English reports are welcome.
 For CLI runtime problems or uncertain ownership, use the
-[CLI forms](https://github.com/tiangong-ai/cli/issues/new/choose). Auto Research
+[CLI forms](https://github.com/tiangong-ai/cli-toolkit/issues/new/choose). Auto Research
 can also prepare the same structured report from its installed reporting reference.
 
 ## Atomic data skills
@@ -89,39 +89,39 @@ npm i skills -g
 
 - List available skills (no install):
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --list
+  npx skills add https://github.com/tiangong-ai/agent-skills --list
   ```
 - Install all skills (project scope by default):
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills
+  npx skills add https://github.com/tiangong-ai/agent-skills
   ```
 - Install specific skills:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-auto-research --skill tiangong-kb-sci-search
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-auto-research --skill tiangong-kb-sci-search
   ```
 - Install the Tsinghua graduate thesis LaTeX workflow:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tsinghua-graduate-thesis
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tsinghua-graduate-thesis
   ```
 - Install the Tiangong KB ingest workflow:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-kb-ingest
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-kb-ingest
   ```
 - For a WorkBuddy/CodeBuddy producer, install the thin adapter beside the
   canonical orchestrator:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills --skill tiangong-auto-research --skill tiangong-auto-research-workbuddy
+  npx skills add https://github.com/tiangong-ai/agent-skills --skill tiangong-auto-research --skill tiangong-auto-research-workbuddy
   ```
 
 ## Target agents and scope
 
 - Target specific agents:
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills -a codex -a claude-code
+  npx skills add https://github.com/tiangong-ai/agent-skills -a codex -a claude-code
   ```
 - Install globally (user scope):
   ```bash
-  npx skills add https://github.com/tiangong-ai/skills -g
+  npx skills add https://github.com/tiangong-ai/agent-skills -g
   ```
 - Scope notes:
   - Codex is a universal agent: project scope uses `./.agents/skills`, and
