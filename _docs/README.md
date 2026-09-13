@@ -13,7 +13,7 @@ checkPaths:
   - .github/workflows/docpact.yml
   - _docs/**
 lastReviewedAt: 2026-09-13
-lastReviewedCommit: 501aacff59c71178557f7ec90be4fae6dfcbe69d
+lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
 ---
 
 # Skills Documentation

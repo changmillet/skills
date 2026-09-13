@@ -17,6 +17,13 @@ test("an isolated Auto Research installation carries the same report sections as
     const route = entry.match(/\[[^\]]+\]\((references\/issue-reporting\.md)\)/);
     assert.ok(route, "reporting must be discoverable from the installed entrypoint");
     const reference = await readFile(join(installed, route[1]), "utf8");
+    const destinations = [...reference.matchAll(/https:\/\/github\.com\/[^)\s]+/g)]
+      .map(([value]) => new URL(value).pathname);
+    assert.deepEqual(destinations, [
+      "/tiangong-ai/workspace-suite/blob/main/_docs/contracts/issue-reporting-policy.md",
+      "/tiangong-ai/agent-skills/issues/new/choose",
+      "/tiangong-ai/cli-toolkit/issues/new/choose",
+    ], "installed feedback guidance must route reports to the final repositories");
     const templates = [...reference.matchAll(/```md\n([\s\S]*?)```/g)].map((match) =>
       [...match[1].matchAll(/^### (.+)$/gm)].map((heading) => heading[1]),
     );

@@ -11,8 +11,8 @@ checkPaths:
   - CONTRIBUTING.md
   - .github/ISSUE_TEMPLATE/**
   - README.md
-lastReviewedAt: 2026-09-02
-lastReviewedCommit: a7b4775f48d910197f3a9829cd8a9f1218d337b7
+lastReviewedAt: 2026-09-13
+lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
 ---
 
 # Contributing Feedback / 提交反馈
