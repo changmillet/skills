@@ -15,8 +15,8 @@ checkPaths:
   - .github/workflows/docpact.yml
   - scripts/**
   - _docs/**
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
+lastReviewedAt: 2026-09-14
+lastReviewedCommit: 504f7792fef042c49e8f75cbd942c0bc52404b6d
 ---
 
 # Tiangong AI Skills Agent Contract
