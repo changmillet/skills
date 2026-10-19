@@ -118,7 +118,7 @@ detailed stop and recovery rules.
   for multiple diagnostic trials on one computational requirement, investigation
   recovery, candidate selection or explicit promotion to a fresh Canary.
 - Read [references/evidence-pipeline.md](references/evidence-pipeline.md) before
-  discovery, acquisition, evidence refresh, or an addendum.
+  discovery, acquisition, cross-paper literature reuse, evidence refresh, or an addendum.
 - Read [references/evidence-exhaustion.md](references/evidence-exhaustion.md)
   before declaring a material evidence gap exhausted, requesting paid or
   authorized access, waiting for an external response, or narrowing scope.

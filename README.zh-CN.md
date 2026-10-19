@@ -13,8 +13,8 @@ checkPaths:
   - README.md
   - .claude-plugin/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
+lastReviewedAt: 2026-10-20
+lastReviewedCommit: 5e692461708a4e02c1012086a59d2bd75da99673
 ---
 
 # 天工 AI Skills
@@ -209,7 +209,10 @@ resolver。已安装命令支持与发行元数据是两件事；元数据不可
 已安装 Skill 的 setup reference。
 
 资料较多时，orchestrator 使用 CLI 的只读文件大小预检、角色覆盖预测、有界原子
-批量登记与显式科学评审执行。兼容的锁定 CLI 支持在分析前于同一项目修订获取结果，
+批量登记与显式科学评审执行。兼容的锁定 CLI 可将已完成且仍适用的 acquisition 和
+typed content 继承到经过审批的后继项目，避免重复执行该阶段。可选的显式双项目比较
+区分文献身份、精确文件匹配和每篇论文的证据／主张映射，不自动接纳证据或继承科学
+批准；用量汇报区分实际回执、原生宿主预留量和估计值。CLI 也支持在分析前于同一项目修订获取结果，
 仅在需要新来源时显式重开 discovery，并复用已有回执和文件。具备对应命令的锁定
 CLI 还可在分析前，经用户批准精确计划，修订既有 planned 规则的生命周期声明及其
 模型／参数绑定；实质设计变化或分析后的修订仍走正式后继流程。原始要求、当前批准

@@ -56,7 +56,37 @@ reuse unchanged context and results rather than rescanning the corpus each turn.
 their exact requirement versions and keep original-only obligations visible; a
 narrower approved scope does not itself answer or erase them. Stale checks need
 revalidation.
+For a continuation, summarize what changed, which requirements/claims depend on
+it, the remaining material gaps and the exact artifact references to inspect.
+Keep that summary a navigation view of authoritative state, not a replacement
+ledger or a substitute for reading relevant methods, equations and counterevidence.
 Record actual outcomes through the existing allowed stage/acceptance boundary.
+
+When two known projects share literature, compatible runtimes can compare their
+existing records without new search, acquisition or evidence admission:
+
+```bash
+node "$AUTO_RESEARCH_CLI" --workspace /absolute/path/to/workspace -- research status --project PAPER_1 --compare-project PAPER_2 --workspace /absolute/path/to/workspace --json
+```
+
+Inspect the comparison's verification state, omitted counts and limitations.
+Work-identity matches, exact-byte matches and paper-specific atom/claim mappings
+are different facts. Missing mappings or unknown versions remain unknown;
+conflicting identities need investigation. Use exact source notes and locators
+to avoid duplicate first-pass reading, then independently assess relevance to
+each paper. The view does not approve reuse or copy evidence. Use the supported
+project intake/recovery route for any subsequent admission; a fresh reviewer
+must still reach its own judgment. If the locked runtime lacks this optional
+view, inspect each project's existing status/artifacts rather than inventing a
+shared index or changing the runtime lock.
+
+Report efficiency from observed records: unique works and exact files, retained
+versus newly acquired material, and repeated operations when known. Keep measured
+usage receipts, `reserved-native-host` stage accounting, estimates and outstanding
+holds separate. Record active/waiting time only when actually observed, otherwise
+leave it unknown. A smaller packet or fewer accounting reservations does not
+establish token, invoice or time savings. Compare like-for-like runs before
+claiming an improvement; no billing-reconciliation workflow is required.
 
 A recent reviewer suggestion is evidence for repair, not authority to replace
 the original question. Separate necessary corrections from a proposed change

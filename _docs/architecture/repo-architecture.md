@@ -13,8 +13,8 @@ checkPaths:
   - README.zh-CN.md
   - .claude-plugin/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-14
-lastReviewedCommit: 504f7792fef042c49e8f75cbd942c0bc52404b6d
+lastReviewedAt: 2026-10-20
+lastReviewedCommit: 5e692461708a4e02c1012086a59d2bd75da99673
 ---
 
 # Skills Repository Architecture
@@ -104,7 +104,14 @@ Large evidence sets use the CLI's optional pre-freeze role forecast and bounded
 atomic decomposition/atom batches. File-size preflight distinguishes an
 artifact ceiling from aggregate output limits. Prepared scientific reviews use
 the configured isolated transport through an explicit cost-confirmed execution
-command; recovery reuses exact discovery/artifact bytes in a reviewed successor.
+command. Recovery selects same-project revision, completed acquisition/content
+inheritance or discovery-only inheritance according to changed dependencies and
+locked-runtime support. The optional explicit two-project status comparison
+separates work identity, exact bytes and project-specific claim applicability;
+it is a derived CLI view, not an evidence-admission or approval channel.
+Source notes and extraction may be reused while scientific review remains
+target-specific. Cost guidance preserves actual-versus-reserved accounting and
+does not infer token savings from packet-byte reduction.
 These recipes do not duplicate schema evaluators or add per-record verification
 loops to the Skill.
 

@@ -350,7 +350,10 @@ try {
   const referencePath = join(installed, "references", "execution-assurance.md");
   const reference = await readFile(referencePath, "utf8") + "\n" +
     await readFile(join(installed, "references", "bounded-investigation.md"), "utf8") + "\n" +
-    await readFile(join(installed, "references", "fulltext-access-preflight.md"), "utf8");
+    await readFile(join(installed, "references", "fulltext-access-preflight.md"), "utf8") + "\n" +
+    [...(await readFile(join(installed, "references", "scientific-design.md"), "utf8"))
+      .matchAll(/```bash\n([\s\S]*?)```/g)]
+      .filter(match => /research project fork /.test(match[1])).map(match => match[0]).join("\n");
   for (const marker of ["requestProvenance", "verbatim", "interpreted", "reconstructed", "unrecorded", "nativeRunSha256", "unverified-execution", "on-demand", "no total context-length"]) {
     assert.ok(reference.includes(marker), `Installed task assurance must explain ${marker}`);
   }
@@ -447,6 +450,23 @@ try {
   assert.ok(observation.includes("--confirm-execution"), "Ordinary calculation observation requires exact execution consent");
   const completeRead = commands.find(argv => argv.includes("stage") && argv.includes("read"));
   assert.equal(completeRead[completeRead.indexOf("--length") + 1], "all", "Whole-object reads must remain an explicit supported choice");
+  for (const stage of ["acquire", "discover"]) {
+    const recovery = commands.find(argv => argv[1] === "project" && argv[2] === "fork" &&
+      argv[argv.indexOf("--resume-through") + 1] === stage);
+    assert.ok(recovery, `Installed recovery guidance must execute ${stage} inheritance through the locked resolver`);
+    assert.notEqual(recovery[3], recovery[recovery.indexOf("--to") + 1], "Recovery must name a distinct successor");
+    for (const flag of ["--design", "--design-producer-agent", "--design-producer-session"]) {
+      const index = recovery.indexOf(flag);
+      assert.ok(index >= 0 && recovery[index + 1] && !recovery[index + 1].startsWith("--"),
+        `Top-journal inheritance must retain the target-specific ${flag} binding`);
+    }
+  }
+  const comparison = commands.find(argv => argv[1] === "status" && argv.includes("--compare-project"));
+  assert.ok(comparison, "Literature reuse inspection must use an explicit public two-project comparison");
+  const comparedProject = comparison[comparison.indexOf("--compare-project") + 1];
+  assert.ok(comparison.includes("--project") && comparedProject && !comparedProject.startsWith("--"));
+  assert.notEqual(comparison[comparison.indexOf("--project") + 1], comparedProject);
+  assert.ok(comparison.includes("--json"), "Comparison must retain the machine-readable evidence boundaries");
 } finally {
   await rm(recipeFixture, { recursive: true, force: true });
 }

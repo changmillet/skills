@@ -1,6 +1,6 @@
 # Evidence-first research pipeline
 
-Load this reference before discovery, acquisition, evidence refresh, or an
+Load this reference before discovery, acquisition, cross-paper literature reuse, evidence refresh, or an
 addendum. The operating sequence is:
 
 ```text
@@ -193,6 +193,24 @@ read [full-text route preflight](fulltext-access-preflight.md) before large
 acquisition. Verify a few relevant materials through the actual planned route,
 reuse applicable successes and keep OA-sufficient work moving without a campus
 network requirement. This does not replace the coverage or access-handoff rules.
+
+Before retrieving a shared work again, distinguish its bibliographic identity
+(normalized DOI or known source identity), its exact version/file bytes, and its
+use in each paper. A DOI match does not identify a particular PDF or correction;
+a file hash does not establish relevance or independent scientific support.
+Retain article version, lawful route/license, original and derivative hashes,
+parser/version and exact passage locators when available. Unknown metadata stays
+unknown, and conflicting identities must not be silently merged.
+
+Reuse applicable files, extraction and source-level notes; keep each paper's
+admission, evidence roles, support/counterevidence assessment and claim mappings
+separate. Use the optional two-project comparison in
+[execution assurance](execution-assurance.md#recover-the-task-before-choosing-local-work)
+to locate existing records, then read the exact needed material. Shared notes do
+not count as a new full-text reading or allow one paper's judgment to approve
+another. Screen against named evidence gaps before retrieval, batch compatible
+authorized routes and local extraction where useful, and stop at the existing
+handoff boundary when access requires user action.
 
 After provisional admission, the native `acquire` stage assesses every source
 exactly once. Use selected external acquisition/document Skills or an explicitly
@@ -427,10 +445,13 @@ queries. Rebuild the current typed-content view; older failed decompositions
 and deselected atoms remain historical, not current evidence.
 
 When the locked runtime or snapshot cannot support that revision, or the design
-changes or analysis has started, use the formal recovery/new-generation route in
-[scientific-design.md](scientific-design.md). `--resume-through discover` can
-reuse verified discovery and files in a successor. Its target-specific
-Policy/design approval remains required. Never hand-edit frozen history.
+changes or analysis has started, use the recovery decision table in
+[scientific-design.md](scientific-design.md#scope-change-and-authoritative-generations).
+Prefer `--resume-through acquire` when completed acquisition and typed content
+remain applicable to the successor; use `--resume-through discover` when its
+acquisition must reopen. Both preserve verified material, and neither inherits
+target-specific Policy/design or scientific approval. Never hand-edit frozen
+history.
 
 Never mutate a closed project. When material new evidence exists, create a new
 addendum project:
