@@ -13,8 +13,8 @@ checkPaths:
   - README.zh-CN.md
   - .claude-plugin/**
   - "*/SKILL.md"
-lastReviewedAt: 2026-09-13
-lastReviewedCommit: 7d8758dd19b53bd6fed89beaed7b8e4e127f5576
+lastReviewedAt: 2026-10-20
+lastReviewedCommit: 5e692461708a4e02c1012086a59d2bd75da99673
 ---
 
 # Tiangong AI Skills
@@ -235,7 +235,12 @@ not evidence that no update exists. See the installed setup reference.
 For acquisition-heavy work, the orchestrator uses the CLI's read-only artifact
 size and role-coverage forecasts, bounded atomic content batches, and explicit
 prepared scientific-review execution. Recovery reuses verified discovery and
-downloaded artifacts. A compatible locked runtime can revise acquisition in the
+downloaded artifacts, and can inherit completed applicable acquisition and typed
+content into a reviewed successor without repeating that stage. An optional
+explicit two-project comparison separates work identity, exact-file matches and
+paper-specific evidence/claim mappings; it does not admit evidence or inherit
+scientific approval. Usage reports distinguish measured receipts from native-host
+reservations and estimates. A compatible locked runtime can revise acquisition in the
 same project before analysis, explicitly reopening discovery only for new sources;
 a compatible runtime also allows the owner to approve pre-analysis amendments
 to planned lifecycle declarations and existing model/parameter links. Substantive

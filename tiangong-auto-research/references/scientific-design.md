@@ -292,11 +292,40 @@ bypass an earlier gate. The source becomes explicitly superseded, the default
 status shows only the authoritative descendant, and `--all` remains the history
 view.
 
-Prefer the supported same-project acquisition revision before analysis when
-the study is unchanged. It preserves the existing research-design approval and
-reopens only the explicitly selected evidence stages. The following fork is the
-fallback when that revision is unavailable or a new generation is required;
-it preserves discovery and files rather than repeating search and download:
+Choose recovery from the actual changed dependencies and the locked runtime's
+supported operations:
+
+| Current condition | Recovery path |
+| --- | --- |
+| Before analysis, unchanged question/Policy/design/requirements, but acquisition needs correction | Prefer the supported same-project acquisition revision; reopen discovery only for genuinely new sources. |
+| A successor is required, acquisition is complete, and the verified frozen audit and typed content remain applicable to the target design | Prefer `--resume-through acquire` on a compatible runtime. Preserve materials and let the CLI rebuild target-bound content. |
+| A successor is required but its evidence needs new sources, different selected files, readable derivatives or changed evidence-role coverage | Use `--resume-through discover` to retain existing discovery/files while reopening acquisition; obtain only the missing evidence. |
+
+A model correction does not by itself require more literature. Check whether it
+changes the evidence roles, closest-work comparisons or claim applicability.
+Unchanged bytes alone do not answer that question. If requirements or the
+question change beyond the supported fork contract, use the reviewed new-project
+path rather than patching inherited state.
+
+For completed, still-applicable acquisition:
+
+```bash
+node "$AUTO_RESEARCH_CLI" --workspace /absolute/path/to/workspace -- \
+  research project fork OLD --to NEW --resume-through acquire \
+  --design /absolute/path/to/new-scientific-design.json \
+  --design-producer-agent codex \
+  --design-producer-session FRESH_NATIVE_SESSION \
+  --workspace /absolute/path/to/workspace --json
+```
+
+Inspect the successor's acquisition/content snapshots, exact artifact bindings,
+retained decompositions and atoms, coverage and pending scientific gates. The
+CLI rebuilds target-bound hashes; do not require source and successor snapshot
+hashes to be identical. A missing or invalid source content snapshot is not
+evidence that passages were inherited. Never mark a new search, download or
+substantive reading as performed merely because its prior output was retained.
+
+When acquisition must reopen, or the locked runtime lacks acquire inheritance:
 
 ```bash
 node "$AUTO_RESEARCH_CLI" --workspace /absolute/path/to/workspace -- \
@@ -307,15 +336,18 @@ node "$AUTO_RESEARCH_CLI" --workspace /absolute/path/to/workspace -- \
   --workspace /absolute/path/to/workspace --json
 ```
 
-First approve the target-specific Policy and design as required for every
-top-journal successor. The fork retains source download provenance and exact
-artifact bytes, reopens acquire, and keeps old snapshots/reviews immutable.
-Use the successor's status and artifact IDs to select unchanged files in its
-new acquisition audit, then obtain only the missing lawful evidence. Rerun
-typed-content and scientific reviews for that successor; inherited evidence is
-not inherited scientific approval. For an evidence-report project without a
-scientific design, omit the design options. Neither path is an in-place edit of
-the old generation.
+Both forks require the target-specific Policy/design approval and fresh native
+producer session for a top-journal successor. They retain original download
+provenance and exact files while keeping old snapshots/reviews immutable.
+Discovery-only inheritance reopens acquire: select retained artifact IDs in the
+new audit, obtain only the missing lawful evidence, then rebuild typed content.
+Acquire inheritance avoids repeating that completed stage, but all required
+target scientific reviews still run before analysis. Reassess affected claims
+against the retained evidence, including counterevidence and failed checks;
+inherited evidence is not inherited scientific approval. If the runtime refuses
+inheritance, resolve its reported incompatibility or use the supported fallback,
+never edit the control store. For an evidence-report project without a scientific
+design, omit the design options.
 
 Filling the original design's pending uncertainty values, model code or exact
 environment lock is not automatically a material redesign. Use the compatible
