@@ -299,13 +299,24 @@ supported operations:
 | --- | --- |
 | Before analysis, unchanged question/Policy/design/requirements, but acquisition needs correction | Prefer the supported same-project acquisition revision; reopen discovery only for genuinely new sources. |
 | A successor is required, acquisition is complete, and the verified frozen audit and typed content remain applicable to the target design | Prefer `--resume-through acquire` on a compatible runtime. Preserve materials and let the CLI rebuild target-bound content. |
-| A successor is required but its evidence needs new sources, different selected files, readable derivatives or changed evidence-role coverage | Use `--resume-through discover` to retain existing discovery/files while reopening acquisition; obtain only the missing evidence. |
+| A successor is required and all needed sources are already admitted, but selected files, readable derivatives or evidence-role coverage must change | Use `--resume-through discover` to retain discovery/files while reopening acquisition; obtain only the missing material. |
+| Genuinely new sources need discovery admission | Use a supported discovery-opening path; inheriting a completed discovery stage alone cannot admit a new source. See the conditions below. |
 
 A model correction does not by itself require more literature. Check whether it
 changes the evidence roles, closest-work comparisons or claim applicability.
 Unchanged bytes alone do not answer that question. If requirements or the
 question change beyond the supported fork contract, use the reviewed new-project
 path rather than patching inherited state.
+
+For an unchanged pre-analysis study, acquisition revision with
+`--include-discovery` reopens discovery directly. When a successor is necessary,
+a compatible runtime may first inherit through acquire, then reopen that
+successor with the same revision command and its exact new snapshot hash,
+before any downstream attempt. This sequence is available only if the inherited
+audit/content can be admitted under the target design. Otherwise start a reviewed
+generation at discovery (omit `--resume-through`); it does not automatically clone
+the source's discovery ledger or artifacts. Re-admit applicable retained material
+through supported intake with its provenance rather than claiming it was inherited.
 
 For completed, still-applicable acquisition:
 
